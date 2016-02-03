@@ -1,0 +1,7 @@
+
+!turn a Topre 87u into an HHKB
+
+keycode 49 = Escape asciitilde Escape 
+!keycode 22 = BackSpace grave BackSpace
+keycode 9 = grave asciitilde grave
+
