@@ -1,0 +1,184 @@
+
+# bspwm hotkeys
+#
+
+
+alt + shift + Escape
+	killall sh; \
+	bspc quit
+
+alt + w 
+	bspc window -c
+
+alt + t
+	bspc desktop -l next
+
+#balance
+alt + b
+	bspc desktop -B
+
+#window type
+alt + {s,f,g,t}
+	bspc window -t {floating,fullscreen,pseudo_tiled,tiled}
+
+alt + {grave,Tab}
+	bspc {window,desktop} -f last
+
+#swap focused window with last window
+alt + apostrophe
+	bspc window -s last
+
+#alt + {o,i}
+#	bspc control --record-history off; \
+#	bspc window {older,newer} -f; \
+#	bspc control --record-history on
+
+alt + m
+	bspc window -s biggest
+
+#change focus and swap
+alt + {_,shift + }{h,j,k,l}
+	bspc window -{f,s} {left,down,up,right}
+
+#change this binding
+alt + {_,shift + }c
+	bspc window -f {next,prev}
+
+#cycle brackets
+alt + bracket{left,right}
+	bspc desktop -f {prev,next}
+
+#preselect
+alt + ctrl + {h,j,k,l}
+	bspc window -p {left,down,up,right}
+
+#cancel preselect
+alt + ctrl + {_,shift + }space
+	bspc {window -p cancel,desktop -c}
+
+#resize windows
+super + alt + {h,j,k,l}
+	bspc window -e {left -10,down +10,up -10,right +10}
+
+#resize windows
+super + alt + shift + {h,j,k,l}
+	bspc window -e {right -10,up +10,down -10,left +10}
+
+#dunno
+alt + ctrl + {1-9}
+	bspc window -r 0.{1-9}
+
+#move to desktop
+#alt + {_,shift + }{1-9,0}
+#	bspc {desktop -f,window -d} ^{1-9,10}
+alt + {_,shift + }{1-7}
+	bspc {desktop -f,window -d} ^{1-7}
+
+
+#cycle windows through existing formatting
+alt + shift + {u,p}
+	bspc desktop -C {backward,forward}
+
+#rotate,flip windows
+alt + shift + {i,o}
+	bspc desktop -R {90,180}
+
+#sticky window
+alt + e
+	bspc window -t sticky
+
+#private window keeps same position in window
+alt + p
+	bspc window -t private
+
+#move window to previous preselect
+alt + y 
+	bspc window -w last !automatic
+
+#to add, lock groups
+
+~button1
+	bspc pointer -g focus
+
+alt + button{1-3}
+	bspc pointer -g {move,resize_side,resize_corner}
+
+alt + !button{1-3}
+	bspc pointer -t %i %i
+
+alt + @button{1-3}
+	bspc pointer -u
+
+#
+# wm independent hotkeys
+#
+alt + Return
+	urxvt
+
+alt + shift + Return
+	xterm
+
+alt + d
+	dmenu_run
+
+# make sxhkd reload its configuration files:
+alt + Escape
+	pkill -USR1 -x sxhkd
+
+# dynamic window gaps 
+alt + {minus,equal}
+	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 2 ))
+
+# hotswap top padding
+alt + shift + {minus, equal}
+	bspc config -d focused top_padding $((`bspc config -d focused top_padding` {+,-} 2 ))
+
+# hotswap bottom padding
+alt + mod4 + {minus,equal}
+	bspc config -d focused bottom_padding $((`bspc config -d focused bottom_padding` {+,-} 2 ))
+
+# hotswap left padding - not working
+alt + shift + {9,0}
+	bspc config -d focused left_padding $((`bspc config -d focused left_padding` {+,-} 2 ))
+
+# hotswap right padding - not working
+alt + mod4 + {9,0}
+	bspc config -d focused right_padding $((`bspc config -d focused right_padding` {+,-} 2 ))
+
+#exit bspwm with process kill
+#super + alt + Escape
+#	pkill panel; \
+#	bspc quit
+
+#wmutils movement
+mod4 + {h, j, k, l}
+	wmv {-10 0, 0 +10, 0 -10, +10 0} $(pfw)
+
+#wmutils resize
+mod4 + shift {h, j, k, l}
+	wrs {-10 0, 0 +10, 0 -10, +10 0} $(pfw)
+
+#wmutils resive opposite
+#mod4 + shift {y,u,i,o}
+#	shift left border out
+mod4 + shift + y
+	wmv {-10 0} $(pfw) && wrs {+10 0} $(pfw)
+
+	#shift left border in
+mod4 + shift + o
+	wmv {+10 0} $(pfw) && wrs {-10 0} $(pfw)
+
+	#shift top border up
+mod4 + shift + i
+	wmv {0 -10} $(pfw) && wrs {0 +10} $(pfw)
+
+mod4 + shift + u
+	wmv {0 +10} $(pfw) && wrs {0 -10} $(pfw)
+
+#wmutils corner
+mod4 + {y,u,b,n,g}
+	corner {tl,tr,bl,br,md} $(pfw)
+
+#or
+mod4 + {_,shift + } equal
+	maximize.sh {-v,-h} $(pfw)
