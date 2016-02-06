@@ -12,10 +12,10 @@ call vundle#begin()
 
 "Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 
-Plugin 'vim-scripts/indentpython.vim'
+"Plugin 'vim-scripts/indentpython.vim'
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'scrooloose/nerdtree'
+"Plugin 'scrooloose/nerdtree'
 Plugin 'chriskempson/base16-vim'
 Plugin 'ChrisKempson/Vim-Tomorrow-Theme'
 "Plugin 'Lokaltog/powerline', {'rpt': 'powerline/bindings/vim'} 
@@ -70,7 +70,7 @@ set noshowmode
 let g:gruvbox_invert_selection=0
 let g:gruvbox_contrast_dark='soft'
 set background=dark
-colorscheme gruvbox
+colorscheme grumple
 "let g:gruvbox_contrast_dark= hard
 
 " Enable vim-airline
