@@ -8,7 +8,7 @@ grey2='#282828'
 workspace=(I 1 2 3 4 5 6)
 
 clock() {
-	echo " $(date +'%I:%M %p') "
+	echo " $(date +'%H:%M') "
 }
 
 clock2() {

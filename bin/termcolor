@@ -1,0 +1,31 @@
+#!/usr/bin/perl
+# Author: Todd Larason <jtl@molehill.org>
+# $XFree86: xc/programs/xterm/vttests/256colors2.pl,v 1.1 1999/07/11 08:49:54 dawes Exp $
+
+print "256 color mode\n\n";
+
+# display back ground colors
+
+for ($fgbg = 38; $fgbg <= 48; $fgbg +=10) {
+
+# first the system ones:
+print "System colors:\n";
+for ($color = 0; $color < 8; $color++) {
+    print "\x1b[${fgbg};5;${color}m::";
+}
+print "\x1b[0m\n";
+for ($color = 8; $color < 16; $color++) {
+    print "\x1b[${fgbg};5;${color}m::";
+}
+print "\x1b[0m\n\n";
+
+# now the color cube
+
+# now the grayscale ramp
+
+
+# now the color cube
+
+# now the grayscale ramp
+
+}

@@ -109,12 +109,12 @@ let s:gb.light4_256  = ['#a89984', 246]     " 168-153-132
 
 let s:gb.bright_red     = ['#fb4934', 1]     " 251-73-52 i am changing this
 "from 167 
-let s:gb.bright_green   = ['#b8bb26', 142]     " 184-187-38
-let s:gb.bright_yellow  = ['#fabd2f', 214]     " 250-189-47
-let s:gb.bright_blue    = ['#83a598', 109]     " 131-165-152
-let s:gb.bright_purple  = ['#d3869b', 175]     " 211-134-155
-let s:gb.bright_aqua    = ['#8ec07c', 108]     " 142-192-124
-let s:gb.bright_orange  = ['#fe8019', 208]     " 254-128-25
+let s:gb.bright_green   = ['#b8bb26', 2]     " 184-187-38
+let s:gb.bright_yellow  = ['#fabd2f', 3]     " 250-189-47
+let s:gb.bright_blue    = ['#83a598', 12]     " 131-165-152
+let s:gb.bright_purple  = ['#d3869b', 5]     " 211-134-155
+let s:gb.bright_aqua    = ['#8ec07c', 14]     " 142-192-124
+let s:gb.bright_orange  = ['#fe8019', 166]     " 254-128-25
 
 let s:gb.neutral_red    = ['#cc241d', 124]     " 204-36-29
 let s:gb.neutral_green  = ['#98971a', 106]     " 152-151-26
@@ -232,7 +232,7 @@ endif
 
 " reset to 16 colors fallback
 if g:gruvbox_termcolors == 16
-  let s:bg0[1]    = 0
+  let s:bg0[1]    = 233 "modify this for background changes default was 0
   let s:fg4[1]    = 7
   let s:gray[1]   = 8
   let s:red[1]    = 9

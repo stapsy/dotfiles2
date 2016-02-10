@@ -2,17 +2,21 @@ xterm*termName: xterm-256color
 xterm*utf8: 1 
 xterm*locale: true
 
+!fonts
+
+
 xterm*metaSendsEscape: true 
 !xterm*reverseVideo: on !xterm*font: "-*-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*"
-!xterm*font: -x0s4-terminus-medium-r-normal--12-120-72-72-c-60-iso1064601
-!xterm*font: -misc-haxor-medium-r-normal--12-120-72-72-c-72-iso8859-2
-!xterm*font: -ucw.cz-haxor-medium-r-normal--12-120-72-72-c-60-iso8859-2
 !xterm*faceName: Inconsolata for Powerline:size=11:antialias=true
-xterm*font: -*-tamsyn-medium-*-*-*-14-*-*-*-*-*-*-*
-!xterm*font: 7x13
+!xterm*font: -*-tamsyn-medium-*-*-*-13-*-*-*-*-*-*-*
+!xterm*font:-*-tamsyn-medium-*-*-*-13-*-*-*-*-*-*-*
+!xterm*font:-*-gohufont-medium-*-*-*-14-*-*-*-*-*-iso8859-*
+xterm*font: -*-codingfonttobi1-*-*-normal-*-12-*-*-*-*-*-*-*
 
 urxvt*scrollBar: false
-urxvt*font: -*-tamsyn-medium-*-*-*-14-*-*-*-*-*-*-*
+urxvt*font:-*-tamsyn-medium-*-*-*-14-*-*-*-*-*-*-*
+!urxvt*font:-kakwa-kakwafont-medium-r-normal--12-120-72-72-c-60-iso8859-1
+!urxvt*font:-benis-uushi-medium-r-normal--11-90-75-75-p-58-iso10646-1
 
 !gruvbox
 ! hard contrast: *background: #1d2021
@@ -24,7 +28,7 @@ urxvt*font: -*-tamsyn-medium-*-*-*-14-*-*-*-*-*-*-*
 *color0:  #282828
 *color8:  #928374
 ! DarkRed + Red
-*color1:  #cc241d
+!*color1:  #cc241d
 *color9:  #fb4934
 ! DarkGreen + Green
 *color2:  #98971a
@@ -45,7 +49,68 @@ urxvt*font: -*-tamsyn-medium-*-*-*-14-*-*-*-*-*-*-*
 *color7:  #a89984
 *color15: #ebdbb2
 ! LighterGrey for background
-*color17: #404040
-*color18: #333333
-*color19: #4d4d4d
+!*color17: #404040
+!*color18: #333333
+!*color19: #4d4d4d
 *cursorColor: #98971a
+
+!smear
+!*background: #20242c
+!*foreground: #b3b8c4
+!*color0:	#3e4853
+!*color8:	#525c67
+!red
+!*color1:	#b06a58
+!*color9:	#ba7e6c
+!green
+!*color2:	#95b47b
+!*color10:	#a9c88f
+!yellow
+!*color3:	#e5c078
+!*color11:	#f9d48c
+!blue
+!*color4:	#58698c
+!*color12:	#6c7da0
+!magenta
+!*color5:	#7b5e8d
+!*color13:	#8f72a1
+!cyan
+!*color6:	#82a1b2
+!*color14:	#96b5c6
+!white
+!*color7:	#cccaca
+!*color15:	#e0dede
+
+!grumple
+!*background: #141414
+!*foreground: #ebdbb2
+!black
+!*color0:  #282828
+!*color8:  #928374
+!red
+!*color1:	#a60d0d
+*color1:	#a62b2b
+!*color1:	#c7301f
+!green		#98e77e
+!*color2:	#b8bb26
+!*color10:	#aaff66
+!yellow
+!*color3:	#e5c078
+!*color11:	#f9d48c
+!blue
+!*color4:	#58698c
+!*color12:	#6c7da0
+!magenta
+!*color5:	#7b5e8d
+!*color13:	#8f72a1
+!cyan
+!*color6:	#82a1b2
+!*color14:	#96b5c6
+!white
+!*color7:	#cccaca
+!*color15:	#e0dede
+
+
+
+
+
