@@ -39,8 +39,7 @@ set term=xterm-256color
 set encoding=utf-8
 "set t_ut=
 ""set go=
-"set term=screen-256color
-"
+
 "set autoindent
 set smartindent
 set smarttab
@@ -60,7 +59,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 set hidden
-set mouse=
+set mouse=a
 
 "colorscheme settings
 "let base16colorspace=256
@@ -71,17 +70,23 @@ set background=dark
 colorscheme grumple
 "let g:gruvbox_contrast_dark= hard
 
-"Enable vim statusbar
+"status bar settings
+"set statusline=- "look into this setting
+"set laststatus=0 noruler "look into this
+set showcmd
 set noshowmode
 set laststatus=2
 set ttimeoutlen=50
+
+" Format the status line - needs to be tested
+"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 "Enable lightline
 let g:lightline = {
 	\ 'colorscheme': '16color',
 	\ 'active': {
 	\	'left':  [ ['mode'], [ 'readonly', 'filename','modified'] ],
-	\	'right': [ ['lineinfo'], ['filetype'] ]
+	\	'right': [ ['lineinfo',''], ['filetype'] ]
 	\},
 	\ 'component': {
 	\	'readonly': '%{&filetype=="help"?"":&readonly?"R":""}',
